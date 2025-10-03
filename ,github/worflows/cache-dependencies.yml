@@ -38,11 +38,11 @@ jobs:
       id: cache-deps
       with:
         path: ~/.cache/pip
-        key: cache-2b11042-${{ hashFiles('requirements.txt') }}
+        key: cache-acfa9d2-${{ hashFiles('requirements.txt') }}
         
-    - name: prime-cache-2b11042
+    - name: prime-cache-acfa9d2
       run: |
-        echo "Starting prime-cache-2b11042 step"
+        echo "Starting prime-cache-acfa9d2 step"
         
         # Test with a simple package that definitely exists
         if [ "${{ steps.cache-deps.outputs.cache-hit }}" == 'true' ]; then
@@ -53,4 +53,4 @@ jobs:
           echo "✅ SUCCESS: Package installed"
         fi
         
-        echo "✅ prime-cache-2b11042 step completed"
+        echo "✅ prime-cache-acfa9d2 step completed"
